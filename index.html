@@ -5,17 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancing Website</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Load ScrollReveal Before Your Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header>
         <h1 class="fade-in">Empowering Businesses with Professional Solutions</h1>
         <button class="cta-button">Let’s Collaborate</button>
     </header>
-    <section class="hero">
+    <section class="hero" style="background: url('background.jpg') no-repeat center center/cover;">
         <h2>Helping Clients Succeed Since 2025</h2>
         <p>Projects Completed: <span>50+</span> | Satisfied Clients: <span>30+</span></p>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Passionate professional providing high-quality services in various fields.</p>
     </section>
     
     <!-- Services Section -->
@@ -49,9 +54,52 @@
         </div>
     </section>
     
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of the project goes here.</p>
+            </div>
+            <div class="project-item">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of the project goes here.</p>
+            </div>
+            <div class="project-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of the project goes here.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
     <script>
-        // Smooth Scroll Animations
-        ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
+        document.addEventListener("DOMContentLoaded", function () {
+            ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
+            ScrollReveal().reveal('.service-item', { duration: 1000, origin: 'right', distance: '50px', interval: 200 });
+            ScrollReveal().reveal('.project-item', { duration: 1000, origin: 'left', distance: '50px', interval: 200 });
+            ScrollReveal().reveal('.contact', { duration: 1000, origin: 'bottom', distance: '50px' });
+        });
     </script>
 </body>
 </html>
