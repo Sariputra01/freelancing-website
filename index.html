@@ -5,71 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancing Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #121212;
-            color: #fff;
-            text-align: center;
-        }
-        .services {
-            position: relative;
-            padding: 50px 20px;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            border-radius: 30px;
-            overflow: hidden;
-        }
-        .services::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            animation: float 6s infinite linear;
-        }
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(30px, 30px); }
-            100% { transform: translate(0, 0); }
-        }
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .service-card {
-            background: #222;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-        .service-card:hover {
-            transform: scale(1.1);
-        }
-        .service-btn {
-            background: #ff4081;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .service-btn:hover {
-            background: #e91e63;
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -77,59 +14,40 @@
         <button class="cta-button">Let’s Collaborate</button>
     </header>
     
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service-card fade-in">
-                <h3>Accounting</h3>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Designing</h3>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Data Analysis</h3>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Dashboards</h3>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Data Cleaning</h3>
-            </div>
-            <div class="service-card fade-in">
-                <h3>Data Modeling</h3>
-            </div>
-        </div>
-    </section>
-    
-    <section class="projects">
-        <h2>Our Projects</h2>
-        <div class="projects-container">
-            <div class="project-card fade-in">
-                <h3>Project 1</h3>
-                <p>Data Analysis for Finance Sector</p>
-            </div>
-            <div class="project-card fade-in">
-                <h3>Project 2</h3>
-                <p>Dashboard Creation for Marketing Insights</p>
-            </div>
-            <div class="project-card fade-in">
-                <h3>Project 3</h3>
-                <p>Data Cleaning for E-commerce</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:mr.sariputra01@gmail.com" class="fade-in">mr.sariputra01@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sariput-jondhale" target="_blank" class="fade-in">Sariput Jondhale</a></p>
+    <section class="hero">
+        <h2>Helping Clients Succeed Since 2025</h2>
+        <p>Projects Completed: <span>50+</span> | Satisfied Clients: <span>30+</span></p>
     </section>
 
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card"><i class="fas fa-calculator"></i><h3>Accounting</h3></div>
+            <div class="service-card"><i class="fas fa-paint-brush"></i><h3>Designing</h3></div>
+            <div class="service-card"><i class="fas fa-chart-line"></i><h3>Data Analysis</h3></div>
+            <div class="service-card"><i class="fas fa-tachometer-alt"></i><h3>Dashboard</h3></div>
+            <div class="service-card"><i class="fas fa-broom"></i><h3>Data Cleaning</h3></div>
+            <div class="service-card"><i class="fas fa-database"></i><h3>Data Modeling</h3></div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Our Projects</h2>
+        <div class="project-gallery">
+            <div class="project-item"><img src="project1.jpg" alt="Project 1"></div>
+            <div class="project-item"><img src="project2.jpg" alt="Project 2"></div>
+            <div class="project-item"><img src="project3.jpg" alt="Project 3"></div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:mr.sariputra01@gmail.com">mr.sariputra01@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sariput-jondhale" target="_blank">Sariput Jondhale</a></p>
+    </section>
+    
     <script>
-        // Smooth Scroll Animations
-        document.addEventListener("DOMContentLoaded", function () {
-            ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
-        });
+        ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
     </script>
 </body>
 </html>
