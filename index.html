@@ -6,6 +6,70 @@
     <title>Freelancing Website</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+        }
+        .services {
+            position: relative;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .service-card {
+            background: #222;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: scale(1.1);
+        }
+        .service-btn {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .service-btn:hover {
+            background: #e91e63;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,27 +82,21 @@
         <div class="services-container">
             <div class="service-card fade-in">
                 <h3>Accounting</h3>
-                <button class="service-btn">Explore</button>
             </div>
             <div class="service-card fade-in">
                 <h3>Designing</h3>
-                <button class="service-btn">Explore</button>
             </div>
             <div class="service-card fade-in">
                 <h3>Data Analysis</h3>
-                <button class="service-btn">Explore</button>
             </div>
             <div class="service-card fade-in">
                 <h3>Dashboards</h3>
-                <button class="service-btn">Explore</button>
             </div>
             <div class="service-card fade-in">
                 <h3>Data Cleaning</h3>
-                <button class="service-btn">Explore</button>
             </div>
             <div class="service-card fade-in">
                 <h3>Data Modeling</h3>
-                <button class="service-btn">Explore</button>
             </div>
         </div>
     </section>
