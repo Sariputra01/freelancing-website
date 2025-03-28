@@ -4,18 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancing Website</title>
-<link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <header>
         <h1 class="fade-in">Empowering Businesses with Professional Solutions</h1>
         <button class="cta-button">Let’s Collaborate</button>
@@ -24,17 +16,41 @@
         <h2>Helping Clients Succeed Since 2025</h2>
         <p>Projects Completed: <span>50+</span> | Satisfied Clients: <span>30+</span></p>
     </section>
-    <section id="portfolio" class="portfolio">
-        <h2>My Work</h2>
-        <div class="portfolio-item">Project 1</div>
-        <div class="portfolio-item">Project 2</div>
-        <div class="portfolio-item">Project 3</div>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <h3>Accounting</h3>
+                <p>Professional accounting services to manage your finances efficiently.</p>
+            </div>
+            <div class="service-item">
+                <h3>Designing</h3>
+                <p>Creative and modern design solutions for businesses.</p>
+            </div>
+            <div class="service-item">
+                <h3>Data Analysis</h3>
+                <p>Data-driven insights to support business decisions.</p>
+            </div>
+            <div class="service-item">
+                <h3>Dashboard</h3>
+                <p>Interactive dashboards for real-time data visualization.</p>
+            </div>
+            <div class="service-item">
+                <h3>Data Cleaning</h3>
+                <p>Improve data quality with advanced cleaning techniques.</p>
+            </div>
+            <div class="service-item">
+                <h3>Data Modeling</h3>
+                <p>Build predictive models for intelligent decision-making.</p>
+            </div>
+        </div>
     </section>
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
-            ScrollReveal().reveal('.portfolio-item', { duration: 1000, origin: 'left', distance: '50px', delay: 200 });
-        });
+        // Smooth Scroll Animations
+        ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
     </script>
 </body>
 </html>
