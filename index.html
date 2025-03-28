@@ -5,50 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancing Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
 </head>
 <body>
     <header>
         <h1 class="fade-in">Empowering Businesses with Professional Solutions</h1>
         <button class="cta-button">Let’s Collaborate</button>
     </header>
-    <section class="hero">
-        <h2>Helping Clients Succeed Since 2025</h2>
-        <p>Projects Completed: <span>50+</span> | Satisfied Clients: <span>30+</span></p>
-    </section>
     
-    <!-- New Sections -->
     <section class="services">
         <h2>Our Services</h2>
-        <div class="grid">
-            <div class="service-item">Accounting</div>
-            <div class="service-item">Designing</div>
-            <div class="service-item">Data Analysis</div>
-            <div class="service-item">Dashboard</div>
-            <div class="service-item">Data Cleaning</div>
-            <div class="service-item">Data Modeling</div>
+        <div class="services-container">
+            <div class="service-card fade-in">
+                <h3>Accounting</h3>
+                <button class="service-btn">Explore</button>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Designing</h3>
+                <button class="service-btn">Explore</button>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Data Analysis</h3>
+                <button class="service-btn">Explore</button>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Dashboards</h3>
+                <button class="service-btn">Explore</button>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Data Cleaning</h3>
+                <button class="service-btn">Explore</button>
+            </div>
+            <div class="service-card fade-in">
+                <h3>Data Modeling</h3>
+                <button class="service-btn">Explore</button>
+            </div>
         </div>
     </section>
-    
-    <section class="portfolio">
-        <h2>Projects</h2>
-        <div class="grid">
-            <div class="project-item">Project 1</div>
-            <div class="project-item">Project 2</div>
-            <div class="project-item">Project 3</div>
-        </div>
-    </section>
-    
-    <footer>
-        <p>Contact us for collaboration!</p>
-    </footer>
-    
+
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            if (typeof ScrollReveal !== 'undefined') {
-                ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
-                ScrollReveal().reveal('.grid div', { duration: 1200, origin: 'bottom', distance: '30px', interval: 200 });
-            }
+        // Smooth Scroll Animations
+        document.addEventListener("DOMContentLoaded", function () {
+            ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
         });
     </script>
 </body>
