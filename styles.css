@@ -1,4 +1,4 @@
-/* Updated CSS with a professional look and improved colors */
+/* Updated CSS with customized services section */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -37,27 +37,35 @@ header {
     padding: 50px 20px;
 }
 
+/* Customized Services Section */
 .services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
+    gap: 30px;
+    padding: 60px 20px;
     background: none;
 }
 
 .service-item {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 15px;
-    transition: 0.3s;
-    width: 250px;
+    background: radial-gradient(circle, #2c2c2c, #1e1e1e);
+    padding: 25px;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.5);
 }
 
 .service-item:hover {
-    background: #333;
-    transform: scale(1.05);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 152, 0, 0.8);
 }
 
 .projects {
