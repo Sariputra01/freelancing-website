@@ -3,16 +3,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
+    background-color: #0d0d0d;
     color: #ffffff;
     overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Header */
 header {
-    background-color: #1f1f1f;
+    background: linear-gradient(135deg, #1a1a1a, #292929);
     padding: 20px;
     text-align: center;
+    animation: slideDown 1s ease-in-out;
 }
 
 h1 {
@@ -23,15 +25,16 @@ h1 {
 .cta-button {
     background-color: #ff7b00;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 .cta-button:hover {
     transform: scale(1.1);
+    background-color: #ff9500;
 }
 
 /* Services Section */
@@ -39,71 +42,63 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px 20px;
-    background: linear-gradient(45deg, #222, #333);
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #111, #222);
     position: relative;
     overflow: hidden;
 }
 
-.services::before {
-    content: '';
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(255, 123, 0, 0.7) 10%, transparent);
-    border-radius: 50%;
-    top: 10%;
-    left: 20%;
-    animation: float 6s infinite alternate ease-in-out;
-}
-
 .service-card {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background-color: #292929;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 15px;
+    margin: 20px;
     text-align: center;
     box-shadow: 0 0 15px rgba(255, 123, 0, 0.5);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: popIn 1s ease-in-out;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 123, 0, 0.8);
 }
 
 .service-card h3 {
     color: #ff7b00;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 /* Contact Section */
 .contact {
-    padding: 50px;
+    padding: 60px;
     text-align: center;
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
 .contact-info a {
     color: #ff7b00;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
+    font-size: 1.3rem;
+    transition: color 0.3s ease-in-out, transform 0.3s;
 }
 
 .contact-info a:hover {
     color: white;
+    transform: scale(1.1);
 }
 
 /* Animations */
@@ -116,11 +111,24 @@ h1 {
     }
 }
 
-@keyframes float {
+@keyframes slideDown {
     from {
-        transform: translateY(0);
+        transform: translateY(-50px);
+        opacity: 0;
     }
     to {
-        transform: translateY(20px);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
