@@ -1,10 +1,16 @@
 /* Dark Theme Styling */
+/* Add a full-page background image */
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white; /* Ensures text is visible */
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+}
+
+/* Hero Section Background */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    padding: 100px;
+    text-align: center;
 }
 
 /* Navbar Styling */
