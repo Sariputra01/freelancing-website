@@ -3,80 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelancing Hub</title>
+    <title>Freelancing Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Freelancing Hub</div>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1 class="fade-in">Empowering Businesses with Professional Solutions</h1>
-            <p>Helping Clients Succeed Since 2025</p>
-            <button class="cta-button">Let’s Collaborate</button>
-        </div>
+        <h1 class="fade-in">Empowering Businesses with Professional Solutions</h1>
+        <button class="cta-button">Let’s Collaborate</button>
     </header>
+    <section class="hero">
+        <h2>Helping Clients Succeed Since 2025</h2>
+        <p>Projects Completed: <span>50+</span> | Satisfied Clients: <span>30+</span></p>
+    </section>
     
-    <section id="services" class="section">
+    <!-- New Sections -->
+    <section class="services">
         <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-box"><i class="fas fa-chart-line"></i><h3>Data Analysis</h3></div>
-            <div class="service-box"><i class="fas fa-paint-brush"></i><h3>Designing</h3></div>
-            <div class="service-box"><i class="fas fa-calculator"></i><h3>Accounting</h3></div>
-            <div class="service-box"><i class="fas fa-database"></i><h3>Data Cleaning</h3></div>
-            <div class="service-box"><i class="fas fa-chart-pie"></i><h3>Dashboard Development</h3></div>
-            <div class="service-box"><i class="fas fa-code"></i><h3>Data Modeling</h3></div>
+        <div class="grid">
+            <div class="service-item">Accounting</div>
+            <div class="service-item">Designing</div>
+            <div class="service-item">Data Analysis</div>
+            <div class="service-item">Dashboard</div>
+            <div class="service-item">Data Cleaning</div>
+            <div class="service-item">Data Modeling</div>
         </div>
     </section>
     
-    <section id="portfolio" class="section">
-        <h2>Our Work</h2>
-        <div class="portfolio-grid">
-            <img src="project1.jpg" alt="Project 1">
-            <img src="project2.jpg" alt="Project 2">
-            <img src="project3.jpg" alt="Project 3">
+    <section class="portfolio">
+        <h2>Projects</h2>
+        <div class="grid">
+            <div class="project-item">Project 1</div>
+            <div class="project-item">Project 2</div>
+            <div class="project-item">Project 3</div>
         </div>
-    </section>
-    
-    <section id="testimonials" class="section">
-        <h2>What Clients Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                <p>"Outstanding service and top-notch quality! Highly recommend."</p>
-                <h4>- John Doe</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Delivered exactly what we needed! Amazing experience."</p>
-                <h4>- Jane Smith</h4>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
     </section>
     
     <footer>
-        <p>&copy; 2025 Freelancing Hub. All rights reserved.</p>
+        <p>Contact us for collaboration!</p>
     </footer>
     
     <script>
-        ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof ScrollReveal !== 'undefined') {
+                ScrollReveal().reveal('.fade-in', { duration: 1000, origin: 'bottom', distance: '50px' });
+                ScrollReveal().reveal('.grid div', { duration: 1200, origin: 'bottom', distance: '30px', interval: 200 });
+            }
+        });
     </script>
 </body>
 </html>
